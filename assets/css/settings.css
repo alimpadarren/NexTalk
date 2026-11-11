@@ -1,0 +1,372 @@
+
+/* =========================================
+   NEXTALK SETTINGS
+========================================= */
+
+.nt-settings-card {
+    width: 100%;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e8edf5);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.025);
+}
+
+.nt-settings-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 18px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border-color, #e8edf5);
+}
+
+.nt-settings-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #edf3ff;
+    color: #155eef;
+    font-size: 21px;
+}
+
+.nt-settings-heading h3 {
+    margin: 0 0 5px;
+    color: var(--text-primary, #172033);
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.nt-settings-heading p {
+    margin: 0;
+    color: var(--text-muted, #7b879b);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.nt-settings-row {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border-color, #edf0f5);
+}
+
+.nt-settings-row:last-child {
+    border-bottom: none;
+}
+
+.nt-settings-row > div {
+    min-width: 0;
+}
+
+.nt-settings-row strong,
+.nt-settings-row > span {
+    color: var(--text-primary, #263247);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.nt-settings-row p {
+    margin: 5px 0 0;
+    color: var(--text-muted, #8792a5);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* SWITCH */
+
+.nt-switch {
+    position: relative;
+    width: 46px;
+    height: 26px;
+    min-width: 46px;
+    padding: 0;
+    border: none;
+    border-radius: 30px;
+    background: #d8deea;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.nt-switch span {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease;
+}
+
+.nt-switch.enabled {
+    background: #155eef;
+}
+
+.nt-switch.enabled span {
+    transform: translateX(20px);
+}
+
+.nt-switch:focus-visible,
+.nt-settings-select:focus-visible,
+.nt-settings-action:focus-visible,
+.nt-settings-danger:focus-visible,
+.nt-reset-settings:focus-visible {
+    outline: 3px solid rgba(21, 94, 239, 0.25);
+    outline-offset: 3px;
+}
+
+/* SELECT */
+
+.nt-settings-select {
+    min-width: 115px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color, #dfe5ef);
+    border-radius: 9px;
+    outline: none;
+    background: var(--input-bg, #ffffff);
+    color: var(--text-primary, #263247);
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ACCOUNT ACTIONS */
+
+.nt-settings-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 17px;
+}
+
+.nt-settings-action,
+.nt-settings-danger {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.nt-settings-action {
+    border: 1px solid #d7e3ff;
+    background: #edf3ff;
+    color: #155eef;
+}
+
+.nt-settings-action:hover {
+    background: #dce8ff;
+}
+
+.nt-settings-danger {
+    border: 1px solid #f5d5d5;
+    background: #fff5f5;
+    color: #d33b3b;
+}
+
+.nt-settings-danger:hover {
+    background: #ffe8e8;
+}
+
+/* NOTIFICATION STATUS */
+
+.nt-settings-note {
+    margin: 12px 0 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--soft-bg, #f5f7fb);
+    color: var(--text-muted, #7b879b);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* RESET AREA */
+
+.nt-settings-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 8px 2px 25px;
+}
+
+.nt-settings-bottom p {
+    margin: 0;
+    color: var(--text-muted, #8792a5);
+    font-size: 12px;
+}
+
+.nt-reset-settings {
+    min-height: 38px;
+    padding: 0 15px;
+    border: 1px solid #f0d1d1;
+    border-radius: 9px;
+    background: #fff5f5;
+    color: #cf3e3e;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.nt-reset-settings:hover {
+    background: #ffe6e6;
+}
+
+/* COMPACT LAYOUT */
+
+body.nt-compact .nt-settings-card {
+    padding: 16px 19px;
+    margin-bottom: 12px;
+}
+
+body.nt-compact .nt-settings-row {
+    min-height: 55px;
+    padding: 9px 0;
+}
+
+body.nt-compact .nt-settings-heading {
+    padding-bottom: 13px;
+}
+
+/* FONT SIZE */
+
+body.nt-font-small .nt-settings-row strong,
+body.nt-font-small .nt-settings-row > span {
+    font-size: 11px;
+}
+
+body.nt-font-small .nt-settings-row p,
+body.nt-font-small .nt-settings-heading p {
+    font-size: 10px;
+}
+
+body.nt-font-large .nt-settings-row strong,
+body.nt-font-large .nt-settings-row > span {
+    font-size: 15px;
+}
+
+body.nt-font-large .nt-settings-row p,
+body.nt-font-large .nt-settings-heading p {
+    font-size: 14px;
+}
+
+/* DARK MODE */
+
+body.dark-mode .nt-settings-card {
+    background: #172033;
+    border-color: #29364d;
+    box-shadow: none;
+}
+
+body.dark-mode .nt-settings-heading {
+    border-bottom-color: #29364d;
+}
+
+body.dark-mode .nt-settings-heading h3,
+body.dark-mode .nt-settings-row strong,
+body.dark-mode .nt-settings-row > span {
+    color: #f1f5fb;
+}
+
+body.dark-mode .nt-settings-heading p,
+body.dark-mode .nt-settings-row p,
+body.dark-mode .nt-settings-bottom p {
+    color: #9eacc1;
+}
+
+body.dark-mode .nt-settings-row {
+    border-bottom-color: #29364d;
+}
+
+body.dark-mode .nt-settings-icon {
+    background: #233b67;
+    color: #8bb2ff;
+}
+
+body.dark-mode .nt-settings-select {
+    background: #202d42;
+    border-color: #35445d;
+    color: #f1f5fb;
+}
+
+body.dark-mode .nt-settings-note {
+    background: #202d42;
+    color: #aab8cc;
+}
+
+body.dark-mode .nt-settings-action {
+    background: #233b67;
+    border-color: #35548a;
+    color: #a9c6ff;
+}
+
+body.dark-mode .nt-settings-danger,
+body.dark-mode .nt-reset-settings {
+    background: #3a252c;
+    border-color: #633540;
+    color: #ffaaaa;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .nt-settings-card {
+        padding: 17px;
+        border-radius: 13px;
+    }
+
+    .nt-settings-heading {
+        gap: 11px;
+    }
+
+    .nt-settings-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 18px;
+    }
+
+    .nt-settings-row {
+        gap: 12px;
+    }
+
+    .nt-settings-row p {
+        max-width: 230px;
+    }
+
+    .nt-settings-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .nt-settings-row {
+        align-items: flex-start;
+    }
+
+    .nt-settings-row > .nt-switch,
+    .nt-settings-row > .nt-settings-select {
+        margin-top: 3px;
+    }
+}
